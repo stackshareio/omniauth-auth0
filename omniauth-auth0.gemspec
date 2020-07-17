@@ -21,9 +21,9 @@ omniauth-auth0 is the OmniAuth strategy for Auth0.
   s.executables   = `git ls-files -- bin/*`.split('\n').map{ |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_runtime_dependency 'omniauth-oauth2', '~> 1.5'
+  s.add_runtime_dependency 'omniauth-oauth2', '~> 1.6'
 
   s.add_development_dependency 'bundler', '~> 1.9'
-  
+
   s.license = 'MIT'
 end

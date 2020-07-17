@@ -5,15 +5,12 @@ require 'uri'
 require 'securerandom'
 require 'omniauth-oauth2'
 require 'omniauth/auth0/jwt_validator'
-require 'omniauth/auth0/telemetry'
 require 'omniauth/auth0/errors'
 
 module OmniAuth
   module Strategies
     # Auth0 OmniAuth strategy
     class Auth0 < OmniAuth::Strategies::OAuth2
-      include OmniAuth::Auth0::Telemetry
-
       option :name, 'auth0'
 
       args %i[
@@ -99,11 +96,6 @@ module OmniAuth
         session['authorize_params'] = params
 
         params
-      end
-
-      def build_access_token
-        options.token_params[:headers] = { 'Auth0-Client' => telemetry_encoded }
-        super
       end
 
       # Declarative override for the request phase of authentication
