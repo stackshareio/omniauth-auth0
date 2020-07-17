@@ -11,8 +11,11 @@ group :development do
   gem 'pry'
   gem 'rubocop', require: false
   gem 'shotgun'
-  gem 'sinatra'
   gem 'thin'
+end
+
+group :development, :test do
+  gem 'sinatra'
 end
 
 group :test do

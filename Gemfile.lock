@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     omniauth-auth0 (2.3.1)
-      omniauth-oauth2 (~> 1.5)
+      omniauth-oauth2 (~> 1.6)
 
 GEM
   remote: https://rubygems.org/
@@ -52,7 +52,7 @@ GEM
       ruby_dep (~> 1.2)
     lumberjack (1.2.4)
     method_source (1.0.0)
-    multi_json (1.14.1)
+    multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     mustermann (1.1.1)
@@ -163,6 +163,3 @@ DEPENDENCIES
   sinatra
   thin
   webmock
-
-BUNDLED WITH
-   1.17.3
